@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+:root{
+    --cor-principal: #ffffff;
+    --cor-secundario: #494949;
+    --cor-secundaria-trans: rgba(73, 73, 73, 0.20);
+    --interagir: #3C93C9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    height: 100%;
+}
+
+
+body {
+    padding-top: 5em;
+    background-image: url(/imagens/taverna.jpg);
+    background-size: cover;           
+    background-position: center;      
+    background-repeat: no-repeat;     
+    background-attachment: fixed;   
+    
+    display: flex;
+    justify-content: center;          
+    align-items: start;             
+    
+    font-family: 'MedievalSharp', sans-serif;
+    text-align: center;
+}
+
+.cabecalho {
+    font-size: 24px;
+    color: var(--cor-principal);
+    text-shadow: 2px 2px var(--cor-secundario);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+form{
+    color: var(--cor-principal);
+    font-size: 18px;
+    background-color: var(--cor-secundaria-trans);
+    border-radius: 20px 10px;
+}
+
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: var(--cor-principal);
+}
+footer a{
+    text-decoration: none;
+    color: var(--cor-principal);
+}
+footer a:hover{
+    color: var(--interagir);
+}
