@@ -11,11 +11,15 @@
         <h1 id="titulo">Bem vindo ao Nível de Herói</h1>
     </header>
     <main>
-        <form action="main.js" method="get">
+        <form id="formHeroi" action="main.js" method="get">
             <label for="fname">Nome do Herói:</label><br>
-            <input type="text" id="fname" name="fname"><br>
+            <input type="text" id="fname" name="fname" maxlength="16" required><br>
+
             <label for="xp">Quantidade de XP:</label><br>
-            <input type="int" id="xp" name="xp">
+            <input type="text" id="xp" name="xp" min="0" max="10001" required>
+
+            <button type="submit">Calcular Nível do Herói</button>
+            <p id="resultado"></p>
         </form>
     </main>
     <footer>

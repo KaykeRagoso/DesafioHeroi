@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
-:root{
+:root {
     --cor-principal: #ffffff;
     --cor-secundario: #494949;
     --cor-secundaria-trans: rgba(73, 73, 73, 0.20);
@@ -13,56 +13,103 @@
     box-sizing: border-box;
 }
 
-
 html, body {
     height: 100%;
 }
 
-
 body {
-    padding-top: 5em;
     background-image: url(/imagens/taverna.jpg);
-    background-size: cover;           
-    background-position: center;      
-    background-repeat: no-repeat;     
-    background-attachment: fixed;   
-    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
     display: flex;
-    justify-content: center;          
-    align-items: start;             
-    
+    flex-direction: column;  /* organiza header, main e footer em coluna */
+    justify-content: space-between; /* joga header pra cima e footer pra baixo */
+    align-items: center;
+
     font-family: 'MedievalSharp', sans-serif;
     text-align: center;
+    color: var(--cor-principal);
 }
+
 
 .cabecalho {
     font-size: 24px;
     color: var(--cor-principal);
     text-shadow: 2px 2px var(--cor-secundario);
+    padding-top: 1.25em;
 }
 
-main{
+/* Área principal */
+main {
+    flex-grow: 1;  /* ocupa o espaço livre entre header e footer */
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* centraliza o form no meio */
+    width: 100%;
+    padding: 10%;
 }
-form{
-    color: var(--cor-principal);
-    font-size: 18px;
+
+/* Formulário */
+form {
+    width: 100%;
+    max-width: 400px;
+    padding: 1.5em;
     background-color: var(--cor-secundaria-trans);
     border-radius: 20px 10px;
+    font-size: 18px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
 }
 
-footer{
+/* Inputs e botões */
+form input, form button {
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 1em;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'MedievalSharp', sans-serif;
+    
+}
+form input {
+    background-color: #fff;
+    color: #000;
+}
+
+form button {
+    background-color: var(--interagir);
+    color: var(--cor-principal);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2a6b95;
+}
+#resultado{
+    padding-top: 1em;
+}
+/* Rodapé */
+footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    gap: 1em;
+    margin-top: 2em;
+    padding: 1em;
     color: var(--cor-principal);
+    text-shadow: 1px 1px var(--cor-secundario);
 }
-footer a{
+
+footer a {
     text-decoration: none;
     color: var(--cor-principal);
+    transition: 0.3s ease;
 }
-footer a:hover{
+
+footer a:hover {
     color: var(--interagir);
 }
