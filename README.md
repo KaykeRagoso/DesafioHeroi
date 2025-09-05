@@ -70,7 +70,7 @@ O Herói de nome Thor está no nível de Prata
 
 Autor
 
-Seu Nome – Seu GitHub
+Kayke Ragoso – [Kayke Ragoso](https://github.com/KaykeRagoso)
 
 Observações
 
